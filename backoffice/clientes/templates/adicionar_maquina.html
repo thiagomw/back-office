@@ -1,0 +1,15 @@
+<h2>Adicionar Máquina Alugada</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="cliente">Cliente:</label>
+    <select name="cliente">
+        {% for cliente in clientes %}
+        <option value="{{ cliente.id }}">{{ cliente.nome }}</option>
+        {% endfor %}
+    </select><br>
+    <label for="especificacoes">Especificações:</label>
+    <input type="text" name="especificacoes" required><br>
+    <label for="data_envio">Data de Envio:</label>
+    <input type="date" name="data_envio" required><br>
+    <input type="submit" value="Adicionar">
+</form>

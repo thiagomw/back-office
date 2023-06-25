@@ -1,0 +1,9 @@
+<h2>Máquinas Alugadas</h2>
+<ul>
+    {% for maquina in maquinas %}
+    <li>Cliente: {{ maquina.cliente.nome }} - Especificações: {{ maquina.especificacoes }} - Data de Envio: {{
+        maquina.data_envio }}</li>
+    {% empty %}
+    <li>Nenhuma máquina alugada encontrada.</li>
+    {% endfor %}
+</ul>

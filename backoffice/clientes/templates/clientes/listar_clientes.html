@@ -1,0 +1,9 @@
+<h2>Clientes</h2>
+<ul>
+    {% for cliente in clientes %}
+    <li>{{ cliente.nome }} - {{ cliente.unidade }} - {{ cliente.endereco }} - {{ cliente.email }} - {{ cliente.telefone
+        }}</li>
+    {% empty %}
+    <li>Nenhum cliente encontrado.</li>
+    {% endfor %}
+</ul>
